@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="myagilityModelStoreContainer" CdmEntityContainer="myagilityEntities2">
+    <EntitySetMapping Name="Competition">
+      <EntityTypeMapping TypeName="myagilityModel.Competition">
+        <MappingFragment StoreEntitySet="Competition">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="AgilityLaps" ColumnName="AgilityLaps" />
+          <ScalarProperty Name="JumpLaps" ColumnName="JumpLaps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lap">
+      <EntityTypeMapping TypeName="myagilityModel.Lap">
+        <MappingFragment StoreEntitySet="Lap">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CompetitionID" ColumnName="CompetitionID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="LapStartTime" ColumnName="LapStartTime" />
+          <ScalarProperty Name="LapLength" ColumnName="LapLength" />
+          <ScalarProperty Name="ReferenceTime" ColumnName="ReferenceTime" />
+          <ScalarProperty Name="ActualTime" ColumnName="ActualTime" />
+          <ScalarProperty Name="MeterPerSecond" ColumnName="MeterPerSecond" />
+          <ScalarProperty Name="NumbersOfFails" ColumnName="NumbersOfFails" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="myagilityModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
